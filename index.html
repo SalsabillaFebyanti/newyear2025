@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy New Year</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+
+    <div class="content-wrapper">
+        <p class="header">Countdown to the New Year</p>
+        <h1 class="year" id="new-year">0000</h1>
+        <div class="timer">
+            <div class="timer-box">
+                <div class="timer-box__count">
+                    <span id="days">0</span>
+                </div>
+                <div class="timer-box__text">Days</div>
+            </div>
+            <div class="timer-box">
+                <div class="timer-box__count">
+                    <span id="hours">0</span>
+                </div>
+                <div class="timer-box__text">Hours</div>
+            </div>
+            <div class="timer-box">
+                <div class="timer-box__count">
+                    <span id="minutes">0</span>
+                </div>
+                <div class="timer-box__text">Minutes</div>
+            </div>
+            <div class="timer-box">
+                <div class="timer-box__count">
+                    <span id="seconds">0</span>
+                </div>
+                <div class="timer-box__text">Seconds</div>
+            </div>
+        </div>
+        
+        <div class="message-box" style="margin: 20px 25px; padding: 15px; border: 2px solid #fff; border-radius: 10px; background: rgba(255, 255, 255, 0.1);">
+            <table style="width: 100%; color: #fff; border-collapse: collapse; font-size: 2.5em;">
+                <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.3);">
+                    <td style="padding: 12px;"><strong>From:</strong></td>
+                    <td style="padding: 12px;">Salsabilla Febyanti</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.3);">
+                    <td style="padding: 12px;"><strong>To:</strong></td>
+                    <td style="padding: 12px;">Arya Fadhil Witjaksono</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.3);">
+                    <td style="padding: 12px;"><strong>Song:</strong></td>
+                    <td style="padding: 12px;">
+                        <button onclick="toggleMusic()" id="musicBtn" style="background: rgba(255, 255, 255, 0.2); border: 1px solid #fff; color: #fff; padding: 5px 15px; border-radius: 5px; cursor: pointer; font-size: 0.8em;">
+                            <span id="playIcon">▶️</span> Play Music
+                        </button>
+                        <audio id="bgMusic" src="taylor.mp3" loop></audio>
+                        <script>
+                            function toggleMusic() {
+                                var music = document.getElementById('bgMusic');
+                                var playIcon = document.getElementById('playIcon');
+                                var musicBtn = document.getElementById('musicBtn');
+                                
+                                if (music.paused) {
+                                    music.play();
+                                    playIcon.innerHTML = '⏸️';
+                                    musicBtn.innerHTML = '<span id="playIcon">⏸️</span> Pause Music';
+                                } else {
+                                    music.pause();
+                                    playIcon.innerHTML = '▶️';
+                                    musicBtn.innerHTML = '<span id="playIcon">▶️</span> Play Music';
+                                }
+                            }
+                        </script>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px; vertical-align: top;"><strong>Message:</strong></td>
+                    <td style="padding: 12px; white-space: pre-line;"> Happy New Year Sayanggg❤️ Surat lengkapnya ada di tombol ini ya.  <a href="pesan.html" style="background: rgba(255, 255, 255, 0.2); border: 1px solid #fff; color: #fff; padding: 5px 15px; border-radius: 5px; cursor: pointer; text-decoration: none; font-size: 0.8em;">Baca Pesan Lengkap</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="fireworks-container" style="background-image: url(sai-gon-by-night-3914364_1280.jpg);"></div>
+
+    <script src="fireworks.js"></script>
+    <script src="app.js"></script>
+    
+</body>
+
+</html>
